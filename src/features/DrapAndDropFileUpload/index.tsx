@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import editIconInBlack from '../assets/editIconInBlack.svg';
+import editIconInBlack from '../../assets/editIconInBlack.svg';
 import './loader.css';
 
 function DragAndDropFileUpload() {
