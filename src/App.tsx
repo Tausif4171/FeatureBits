@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import DragAndDropFileUpload from './features/DrapAndDropFileUpload'
+import ImageInputBox from './features/ImageInputBox';
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
         Hello world!
       </h1>
 
-      <DragAndDropFileUpload />
+      {/* <DragAndDropFileUpload /> */}
+      <ImageInputBox />
     </div>
   );
 }
