@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import DragAndDropFileUpload from './features/DrapAndDropFileUpload'
 import ImageInputBox from './features/ImageInputBox';
+import StepperPopup from './features/Stepper';
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       </h1>
 
       {/* <DragAndDropFileUpload /> */}
-      <ImageInputBox />
+      {/* <ImageInputBox /> */}
+      <StepperPopup />
     </div>
   );
 }
