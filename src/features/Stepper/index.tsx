@@ -41,7 +41,7 @@ const StepperPopup = () => {
                                 </label>
                                 <input
                                     type="text"
-                                    className="border-b-2 border-gray-300 focus:outline-none px-1 py-3 w-full"
+                                    className="border-b-2 border-gray-300 focus:outline-none px-1 py-3 focus:border-blue-500 w-full"
                                     placeholder="Enter your text"
                                 />
                             </div>
