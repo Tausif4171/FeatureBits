@@ -16,7 +16,7 @@ const StepperPopup = () => {
     const progressBarWidth = ((step - 1) / 2) * 100; // Assuming there are 2 steps
 
     return (
-        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center">
+        <div className="fixed bg-[#1E1E1E] bg-opacity-[40%] top-0 left-0 w-full h-full flex items-center justify-center">
             <div className="bg-white p-8 rounded shadow-lg w-96 relative">
                 <div className="absolute top-0 left-0 w-full h-4 bg-gray-200 rounded-t">
                     <div
@@ -41,7 +41,7 @@ const StepperPopup = () => {
                                 </label>
                                 <input
                                     type="text"
-                                    className="border-b-2 border-gray-300 focus:outline-none px-1 py-3 focus:border-blue-500 w-full"
+                                    className="border-b-2 border-gray-300 focus:outline-none px-1 py-3 w-full"
                                     placeholder="Enter your text"
                                 />
                             </div>
