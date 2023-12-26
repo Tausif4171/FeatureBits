@@ -32,7 +32,21 @@ const StepperPopup = () => {
                 </div>
                 <div className="mb-4">
                     {/* Render content based on the current step */}
-                    {step === 1 && <p>Step 1 content goes here</p>}
+                    {step === 1 && (
+                        <div>
+                            <p>Step 1 content goes here</p>
+                            <div className="mb-4">
+                                <label className="block text-sm font-medium text-gray-600">
+                                    Your Input Label
+                                </label>
+                                <input
+                                    type="text"
+                                    className="border-b-2 border-gray-300 focus:outline-none px-1 py-3 w-full"
+                                    placeholder="Enter your text"
+                                />
+                            </div>
+                        </div>
+                    )}
                     {step === 2 && <p>Step 2 content goes here</p>}
                 </div>
                 <div className="flex justify-between">
