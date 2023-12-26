@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import errorIcon from '../../assets/errorIcon.svg'
-
+import nameIcon from '../../assets/nameIcon.svg'
 
 function ImageInputBox() {
     let errors = false
@@ -25,7 +25,7 @@ function ImageInputBox() {
                     name={name}
                 />
                 <img
-                    src={errorIcon}
+                    src={nameIcon}
                     alt='Error Icon'
                     className='absolute left-[10px] top-[50%] transform translate-y-[-50%]'
                 />
