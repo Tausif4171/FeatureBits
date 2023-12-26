@@ -16,18 +16,18 @@ const StepperPopup = () => {
     const progressBarWidth = ((step - 1) / 2) * 100; // Assuming there are 2 steps
 
     return (
-        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-500 bg-opacity-50">
-            <div className="bg-white p-8 rounded shadow-lg w-96">
+        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center">
+            <div className="bg-white p-8 rounded shadow-lg w-96 relative">
+                <div className="absolute top-0 left-0 w-full h-4 bg-gray-200 rounded-t">
+                    <div
+                        className="h-full bg-blue-500 rounded-t"
+                        style={{ width: `${progressBarWidth}%` }}
+                    ></div>
+                </div>
                 <div className="mb-4">
                     <div className="flex items-center justify-between mb-2">
                         <h2 className="text-lg font-semibold">Stepper Popup</h2>
                         <span className="text-sm text-gray-500">Step {step}/2</span>
-                    </div>
-                    <div className="relative h-4 bg-gray-200 rounded">
-                        <div
-                            className="absolute top-0 left-0 h-full bg-blue-500 rounded"
-                            style={{ width: `${progressBarWidth}%` }}
-                        ></div>
                     </div>
                 </div>
                 <div className="mb-4">
