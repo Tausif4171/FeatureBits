@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import closeIcon from '../../assets/closeIcon.svg'
+import forwardArrowIcon from '../../assets/forwardArrowIcon.svg'
 
 const StepperPopup = () => {
     const [step, setStep] = useState(1);
@@ -87,11 +88,12 @@ const StepperPopup = () => {
                 <div className="flex justify-start gap-x-[12px]">
 
                     <button
-                        className="bg-[#222222] text-white text-[14px] font-medium px-[35.5px] py-[11.5px] rounded-[8px] flex justify-center items-center cursor-pointer "
+                        className="bg-[#222222] gap-x-[5.97px] text-white text-[14px] font-medium px-[35.5px] py-[11.5px] rounded-[8px] flex justify-center items-center cursor-pointer "
                         onClick={nextStep}
                         disabled={step === 3}
                     >
                         <span>{step === 3 ? 'Try again' : 'Next'}</span>
+                        {step !== 3 && <img src={forwardArrowIcon} />}
                     </button>
                     {step === 3 && <button
                         className="bg-[#FFFFFF] border-[1px] border-[#CCCCCC] px-[35.5px] py-[11.5px] rounded-[8px] flex justify-center items-center cursor-pointer"
