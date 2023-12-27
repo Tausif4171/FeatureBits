@@ -7,6 +7,7 @@ import forwardArrowIcon from '../../assets/forwardArrowIcon.svg'
 const StepperPopup = () => {
     const [integrateApp, setIntegrateApp] = useState('')
     console.log({ integrateApp })
+    const [integrateAppDescription, setIntegrateAppDescription] = useState('')
     const [step, setStep] = useState(1);
 
     const nextStep = () => {
@@ -64,6 +65,8 @@ const StepperPopup = () => {
                                 </label> */}
                                 <input
                                     type="text"
+                                    value={integrateAppDescription}
+                                    onChange={(e: any) => setIntegrateAppDescription(e.target.value)}
                                     className="border-b-2 border-gray-300 text-[20px] font-medium text-[#000000] leading-[24.4px] focus:outline-none px-1 py-3 w-full"
                                     placeholder="Enter your text"
                                 />
@@ -92,9 +95,9 @@ const StepperPopup = () => {
                 <div className="flex justify-start gap-x-[12px]">
 
                     <button
-                        className={` ${integrateApp ? 'bg-[#222222] text-white cursor-pointer' : 'bg-[#CCCCCC] text-white cursor-not-allowed'} gap-x-[5.97px] text-[14px] font-medium px-[35.5px] py-[11.5px] rounded-[8px] flex justify-center items-center  `}
+                        className={` ${integrateApp || integrateAppDescription ? 'bg-[#222222] text-white cursor-pointer' : 'bg-[#CCCCCC] text-white cursor-not-allowed'} gap-x-[5.97px] text-[14px] font-medium px-[35.5px] py-[11.5px] rounded-[8px] flex justify-center items-center  `}
                         onClick={nextStep}
-                        disabled={!integrateApp} // Disable the button if integrateApp is empty
+                        disabled={!integrateApp || !integrateAppDescription} // Disable the button if integrateApp is empty
                     >
                         <span className=' leading-[19.6px]'>{step === 3 ? 'Try again' : 'Next'}</span>
                         {step !== 3 && <img src={forwardArrowIcon} />}
