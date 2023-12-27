@@ -96,7 +96,7 @@ const StepperPopup = () => {
 
                     <button
                         className={`${(step === 1 && integrateApp) ||
-                            (step === 2 && integrateApp && integrateAppDescription)
+                            (step === 2 && integrateApp && integrateAppDescription) || (step === 3)
                             ? 'bg-[#222222] text-white cursor-pointer'
                             : 'bg-[#CCCCCC] text-white cursor-not-allowed'
                             } gap-x-[5.97px] text-[14px] font-medium px-[35.5px] py-[11.5px] rounded-[8px] flex justify-center items-center  `}
