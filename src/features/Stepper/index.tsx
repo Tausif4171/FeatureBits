@@ -84,21 +84,20 @@ const StepperPopup = () => {
                         </div> */}
                     </div>)}
                 </div>
-                <div className="flex justify-between">
+                <div className="flex justify-start gap-x-[12px]">
+
                     <button
-                        className="bg-gray-300 hover:bg-gray-400 px-4 py-2 rounded"
-                        onClick={prevStep}
-                        disabled={step === 1}
-                    >
-                        Previous
-                    </button>
-                    <button
-                        className="bg-[#222222] text-white text-[14px] font-medium px-[6.71px] py-[5.22px] rounded-[8px] leading-[19.6px] w-[107px] h-[44px]"
+                        className="bg-[#222222] text-white text-[14px] font-medium px-[35.5px] py-[11.5px] rounded-[8px] flex justify-center items-center cursor-pointer "
                         onClick={nextStep}
                         disabled={step === 3}
                     >
-                        <span>{step === 3 ? 'Finish' : 'Next'}</span>
+                        <span>{step === 3 ? 'Try again' : 'Next'}</span>
                     </button>
+                    {step === 3 && <button
+                        className="bg-[#FFFFFF] border-[1px] border-[#CCCCCC] px-[35.5px] py-[11.5px] rounded-[8px] flex justify-center items-center cursor-pointer"
+                    >
+                        Cancel
+                    </button>}
                 </div>
             </div>
         </div>
