@@ -17,17 +17,17 @@ const StepperPopup = () => {
 
     return (
         <div className="fixed bg-[#1E1E1E] bg-opacity-[40%] top-0 left-0 w-full h-full flex items-center justify-center">
-            <div className="bg-white p-8 rounded-[16px] shadow-lg w-[450px] h-[400px] relative">
+            <div className="bg-white p-6 rounded-[16px] shadow-lg w-[450px] h-[400px] relative">
                 <div className="absolute top-0 left-0 w-full h-[6px] bg-[#D9D9D9] rounded-t-[16px]">
                     <div
                         className="h-full bg-[#313131] rounded-t-[16px]"
                         style={{ width: `${progressBarWidth}%` }}
                     ></div>
                 </div>
-                <div className="mb-4">
+                <div className="mb-[100px]">
                     <p className='text-[#263657] text-[24px] font-medium'>What applications do you want to integrate with timefix?</p>
                 </div>
-                <div className="mb-4">
+                <div className="mb-[24px]">
                     {/* Render content based on the current step */}
                     {step === 1 && (
                         <div>
@@ -38,7 +38,7 @@ const StepperPopup = () => {
                                 </label> */}
                                 <input
                                     type="text"
-                                    className="border-b-2 border-gray-300 focus:outline-none px-1 py-3 w-full"
+                                    className="border-b-2 border-gray-300 text-[20px] font-medium text-[#000000] leading-[24.4px] focus:outline-none px-1 py-3 w-full"
                                     placeholder="Enter your text"
                                 />
                             </div>
