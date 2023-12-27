@@ -55,11 +55,11 @@ const StepperPopup = () => {
                         Previous
                     </button>
                     <button
-                        className="bg-blue-500 text-white hover:bg-blue-600 px-4 py-2 rounded"
+                        className="bg-[#222222] text-white text-[14px] font-medium px-[6.71px] py-[5.22px] rounded-[8px] leading-[19.6px] w-[107px] h-[44px]"
                         onClick={nextStep}
                         disabled={step === 2}
                     >
-                        {step === 2 ? 'Finish' : 'Next'}
+                        <span>{step === 2 ? 'Finish' : 'Next'}</span>
                     </button>
                 </div>
             </div>
