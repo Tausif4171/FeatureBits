@@ -17,28 +17,25 @@ const StepperPopup = () => {
 
     return (
         <div className="fixed bg-[#1E1E1E] bg-opacity-[40%] top-0 left-0 w-full h-full flex items-center justify-center">
-            <div className="bg-white p-8 rounded shadow-lg w-96 relative">
-                <div className="absolute top-0 left-0 w-full h-4 bg-gray-200 rounded-t">
+            <div className="bg-white p-8 rounded-[16px] shadow-lg w-[450px] h-[400px] relative">
+                <div className="absolute top-0 left-0 w-full h-[6px] bg-[#D9D9D9] rounded-t-[16px]">
                     <div
-                        className="h-full bg-blue-500 rounded-t"
+                        className="h-full bg-[#313131] rounded-t-[16px]"
                         style={{ width: `${progressBarWidth}%` }}
                     ></div>
                 </div>
                 <div className="mb-4">
-                    <div className="flex items-center justify-between mb-2">
-                        <h2 className="text-lg font-semibold">Stepper Popup</h2>
-                        <span className="text-sm text-gray-500">Step {step}/2</span>
-                    </div>
+                    <p className='text-[#263657] text-[24px] font-medium'>What applications do you want to integrate with timefix?</p>
                 </div>
                 <div className="mb-4">
                     {/* Render content based on the current step */}
                     {step === 1 && (
                         <div>
-                            <p>Step 1 content goes here</p>
+                            {/* <p>Step 1 content goes here</p> */}
                             <div className="mb-4">
-                                <label className="block text-sm font-medium text-gray-600">
+                                {/* <label className="block text-sm font-medium text-gray-600">
                                     Your Input Label
-                                </label>
+                                </label> */}
                                 <input
                                     type="text"
                                     className="border-b-2 border-gray-300 focus:outline-none px-1 py-3 w-full"
