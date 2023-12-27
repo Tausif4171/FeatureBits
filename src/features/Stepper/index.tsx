@@ -92,11 +92,11 @@ const StepperPopup = () => {
                         onClick={nextStep}
                         disabled={step === 3}
                     >
-                        <span>{step === 3 ? 'Try again' : 'Next'}</span>
+                        <span className=' leading-[19.6px]'>{step === 3 ? 'Try again' : 'Next'}</span>
                         {step !== 3 && <img src={forwardArrowIcon} />}
                     </button>
                     {step === 3 && <button
-                        className="bg-[#FFFFFF] border-[1px] border-[#CCCCCC] px-[35.5px] py-[11.5px] rounded-[8px] flex justify-center items-center cursor-pointer"
+                        className="bg-[#FFFFFF] leading-[17.08px] text-[#000000] border-[1px] text-[14px] font-medium border-[#CCCCCC] px-[35.5px] py-[11.5px] rounded-[8px] flex justify-center items-center cursor-pointer"
                     >
                         Cancel
                     </button>}
