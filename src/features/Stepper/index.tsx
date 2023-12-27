@@ -13,7 +13,7 @@ const StepperPopup = () => {
         setStep((prevStep) => Math.max(prevStep - 1, 1));
     };
 
-    const progressBarWidth = ((step - 1) / 2) * 100; // Assuming there are 2 steps
+    const progressBarWidth = ((step - 1) / 3) * 100; // Assuming there are 2 steps
 
     return (
         <div className="fixed bg-[#1E1E1E] bg-opacity-[40%] top-0 left-0 w-full h-full flex items-center justify-center">
@@ -44,7 +44,24 @@ const StepperPopup = () => {
                             </div>
                         </div>
                     )}
-                    {step === 2 && <p>Step 2 content goes here</p>}
+
+                    {step === 2 && (
+                        <div>
+                            {/* <p>Step 1 content goes here</p> */}
+                            <div className="mb-4">
+                                {/* <label className="block text-sm font-medium text-gray-600">
+                                    Your Input Label
+                                </label> */}
+                                <input
+                                    type="text"
+                                    className="border-b-2 border-gray-300 text-[20px] font-medium text-[#000000] leading-[24.4px] focus:outline-none px-1 py-3 w-full"
+                                    placeholder="Enter your text"
+                                />
+                            </div>
+                        </div>
+                    )}
+
+                    {step === 3 && <p>Step 2 content goes here</p>}
                 </div>
                 <div className="flex justify-between">
                     <button
@@ -57,9 +74,9 @@ const StepperPopup = () => {
                     <button
                         className="bg-[#222222] text-white text-[14px] font-medium px-[6.71px] py-[5.22px] rounded-[8px] leading-[19.6px] w-[107px] h-[44px]"
                         onClick={nextStep}
-                        disabled={step === 2}
+                        disabled={step === 3}
                     >
-                        <span>{step === 2 ? 'Finish' : 'Next'}</span>
+                        <span>{step === 3 ? 'Finish' : 'Next'}</span>
                     </button>
                 </div>
             </div>
