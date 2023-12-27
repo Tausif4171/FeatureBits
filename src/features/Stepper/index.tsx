@@ -95,11 +95,20 @@ const StepperPopup = () => {
                 <div className="flex justify-start gap-x-[12px]">
 
                     <button
-                        className={` ${integrateApp || integrateAppDescription ? 'bg-[#222222] text-white cursor-pointer' : 'bg-[#CCCCCC] text-white cursor-not-allowed'} gap-x-[5.97px] text-[14px] font-medium px-[35.5px] py-[11.5px] rounded-[8px] flex justify-center items-center  `}
+                        className={`${(step === 1 && integrateApp) ||
+                            (step === 2 && integrateApp && integrateAppDescription)
+                            ? 'bg-[#222222] text-white cursor-pointer'
+                            : 'bg-[#CCCCCC] text-white cursor-not-allowed'
+                            } gap-x-[5.97px] text-[14px] font-medium px-[35.5px] py-[11.5px] rounded-[8px] flex justify-center items-center  `}
                         onClick={nextStep}
-                        disabled={!integrateApp || !integrateAppDescription} // Disable the button if integrateApp is empty
+                        disabled={
+                            (step === 1 && !integrateApp) ||
+                            (step === 2 && (!integrateApp || !integrateAppDescription))
+                        }
                     >
-                        <span className=' leading-[19.6px]'>{step === 3 ? 'Try again' : 'Next'}</span>
+                        <span className=' leading-[19.6px]'>
+                            {step === 3 ? 'Try again' : 'Next'}
+                        </span>
                         {step !== 3 && <img src={forwardArrowIcon} />}
                     </button>
                     {step === 3 && <button
