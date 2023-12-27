@@ -19,10 +19,10 @@ const StepperPopup = () => {
 
     return (
         <div className="fixed bg-[#1E1E1E] bg-opacity-[40%] top-0 left-0 w-full h-full flex items-center justify-center">
-            <div className="bg-white p-6 rounded-[16px] shadow-lg w-[450px] h-[400px] relative">
-                {step === 3 ? <></> : <div className="absolute top-0 left-0 w-full h-[6px] bg-[#D9D9D9] rounded-t-[16px]">
+            <div className="bg-white p-6 rounded-[16px] shadow-lg w-[450px] h-[400px] relative overflow-hidden">
+                {step === 3 ? <></> : <div className="absolute top-0 left-0 w-full h-[6px] bg-[#D9D9D9] rounded-t-[16px] ">
                     <div
-                        className="h-full bg-[#313131] rounded-t-[16px]"
+                        className="h-full bg-[#313131] rounded-r-[16px]"
                         style={{ width: `${progressBarWidth}%` }}
                     ></div>
                 </div>}
