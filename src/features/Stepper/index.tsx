@@ -24,13 +24,14 @@ const StepperPopup = () => {
                         style={{ width: `${progressBarWidth}%` }}
                     ></div>
                 </div>
-                <div className="mb-[100px]">
-                    <p className='text-[#263657] text-[24px] font-medium'>What applications do you want to integrate with timefix?</p>
-                </div>
+
                 <div className="mb-[24px]">
                     {/* Render content based on the current step */}
                     {step === 1 && (
                         <div>
+                            <div className="mb-[100px]">
+                                <p className='text-[#263657] text-[24px] font-medium'>What applications do you want to integrate with timefix?</p>
+                            </div>
                             {/* <p>Step 1 content goes here</p> */}
                             <div className="mb-4">
                                 {/* <label className="block text-sm font-medium text-gray-600">
@@ -47,6 +48,9 @@ const StepperPopup = () => {
 
                     {step === 2 && (
                         <div>
+                            <div className="mb-[100px]">
+                                <p className='text-[#263657] text-[24px] font-medium'>What do you want these integrations to do? why?</p>
+                            </div>
                             {/* <p>Step 1 content goes here</p> */}
                             <div className="mb-4">
                                 {/* <label className="block text-sm font-medium text-gray-600">
