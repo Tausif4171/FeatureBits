@@ -3,9 +3,20 @@ import closeIcon from '../../assets/closeIcon.svg'
 import forwardArrowIcon from '../../assets/forwardArrowIcon.svg'
 
 const StepperPopup = () => {
-    const [integrateApp, setIntegrateApp] = useState('')
-    console.log({ integrateApp })
-    const [integrateAppDescription, setIntegrateAppDescription] = useState('')
+    const [formData, setFormData] = useState({
+        integrateApp: '',
+        integrateAppDescription: '',
+    });
+
+    const { integrateApp, integrateAppDescription } = formData;
+
+    const handleChange = (field: any, value: any) => {
+        setFormData((prevData) => ({
+            ...prevData,
+            [field]: value,
+        }));
+    };
+
     const [step, setStep] = useState(1);
 
     const nextStep = () => {
@@ -40,7 +51,7 @@ const StepperPopup = () => {
                                 <input
                                     type="text"
                                     value={integrateApp}
-                                    onChange={(e: any) => setIntegrateApp(e.target.value)}
+                                    onChange={(e) => handleChange('integrateApp', e.target.value)}
                                     className="border-b-2 border-gray-300 text-[20px] font-medium text-[#000000] leading-[24.4px] focus:outline-none px-1 py-3 w-full"
                                     placeholder="Enter your text"
                                 />
@@ -58,7 +69,7 @@ const StepperPopup = () => {
                                 <input
                                     type="text"
                                     value={integrateAppDescription}
-                                    onChange={(e: any) => setIntegrateAppDescription(e.target.value)}
+                                    onChange={(e) => handleChange('integrateAppDescription', e.target.value)}
                                     className="border-b-2 border-gray-300 text-[20px] font-medium text-[#000000] leading-[24.4px] focus:outline-none px-1 py-3 w-full"
                                     placeholder="Enter your text"
                                 />
