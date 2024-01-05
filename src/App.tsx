@@ -4,6 +4,7 @@ import './App.css';
 import DragAndDropFileUpload from './features/DrapAndDropFileUpload'
 import ImageInputBox from './features/ImageInputBox';
 import StepperPopup from './features/Stepper';
+import RightDetailsPanel from './features/RightDetailsPanel';
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
 
       {/* <DragAndDropFileUpload /> */}
       {/* <ImageInputBox /> */}
-      <StepperPopup />
+      {/* <StepperPopup /> */}
+      <RightDetailsPanel />
     </div>
   );
 }
