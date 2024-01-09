@@ -9,7 +9,7 @@ import MobileAndDesktopView from './features/MobileAndDesktopView';
 
 function App() {
   return (
-    <div>
+    <div className=' bg-[#eee]'>
 
       {/* <DragAndDropFileUpload /> */}
       {/* <ImageInputBox /> */}
