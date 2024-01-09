@@ -5,6 +5,7 @@ import DragAndDropFileUpload from './features/DrapAndDropFileUpload'
 import ImageInputBox from './features/ImageInputBox';
 import StepperPopup from './features/Stepper';
 import RightDetailsPanel from './features/RightDetailsPanel';
+import MobileAndDesktopView from './features/MobileAndDesktopView';
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       {/* <DragAndDropFileUpload /> */}
       {/* <ImageInputBox /> */}
       {/* <StepperPopup /> */}
-      <RightDetailsPanel />
+      {/* <RightDetailsPanel /> */}
+      <MobileAndDesktopView />
 
     </div>
   );
