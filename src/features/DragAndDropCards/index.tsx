@@ -19,13 +19,24 @@ function DragAndDropCards() {
     };
 
     const handleDrop = (event: any, targetUser: any) => {
+        // Create a new array of users by mapping over the existing users array
         const updatedUsers = users.map(user =>
-            user.id === targetUser.id ? draggedUser : user.id === draggedUser.id ? targetUser : user
+            // If the current user in the map is the same as the targetUser (the one where the drop occurred),
+            // replace it with the draggedUser (the user being dragged)
+            user.id === targetUser.id ? draggedUser :
+                // If the current user is the draggedUser, replace it with the targetUser
+                user.id === draggedUser.id ? targetUser :
+                    // If neither of the above conditions is true, keep the user unchanged
+                    user
         );
 
+        // Update the state with the new array of users
         setUsers(updatedUsers);
+
+        // Reset the draggedUser state to null, as the dragging operation has concluded
         setDraggedUser(null);
     };
+
 
     return (
         <div className="w-[100%]">
