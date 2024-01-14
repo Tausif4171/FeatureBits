@@ -6,6 +6,7 @@ import ImageInputBox from './features/ImageInputBox';
 import StepperPopup from './features/Stepper';
 import RightDetailsPanel from './features/RightDetailsPanel';
 import MobileAndDesktopView from './features/MobileAndDesktopView';
+import DragAndDropCards from './features/DragAndDropCards';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
       {/* <ImageInputBox /> */}
       {/* <StepperPopup /> */}
       {/* <RightDetailsPanel /> */}
-      <MobileAndDesktopView />
+      {/* <MobileAndDesktopView /> */}
+      <DragAndDropCards />
 
     </div>
   );
