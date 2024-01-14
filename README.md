@@ -5,3 +5,7 @@ List of Feature Bits 🔥
 => Image Input Box
 
 => Stepper
+
+=> Mobile and Desktop view on the toggle button.
+
+=> Drag and drop cards
